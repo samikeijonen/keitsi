@@ -96,10 +96,25 @@ textarea {
 	word-wrap: break-word;
 }
 
+body {
+	padding: var(--spacing-unit-8x) var(--spacing-unit-2x);
+}
+
+header,
 main {
 	margin: 0 auto;
 	max-width: var(--max-width);
-	padding: var(--spacing-unit-8x) var(--spacing-unit-2x);
+}
+
+/* Anchors. */
+a {
+	color: var(--color-primary);
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: var(--color-primary-900);
 }
 
 /* Headings. */
@@ -144,6 +159,36 @@ h6,
 	font-size: var(--font-size-h6);
 }
 
+/* Lists. */
+ul,
+ol {
+	margin: 0 0 var(--spacing-unit-4x) var(--spacing-unit-2x);
+	padding: 0 0 0 var(--spacing-unit-3x);
+}
+
+ul {
+	list-style-type: disc;
+}
+
+ol {
+	list-style-type: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: var(--spacing-unit-2x);
+	padding-left: var(--spacing-unit-2x);
+}
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin: 0 var(--spacing-unit-4x) var(--spacing-unit-4x);
+}
+
 /* Media. */
 /* Make sure embeds and iframes fit their containers. */
 embed,
@@ -180,6 +225,17 @@ p {
 # Components - specific UI components.
 --------------------------------------------------------------*/
 
+.menu__items {
+	display: flex;
+	flex-wrap: wrap;
+	list-style-type: none;
+	margin: 0 0 var(--spacing-unit-4x) 0;
+	padding: 0;
+}
+
+.menu__item {
+	margin-right: var(--spacing-unit-2x);
+}
 
 
 /*--------------------------------------------------------------

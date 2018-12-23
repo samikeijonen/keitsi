@@ -5,12 +5,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ title }} &ndash; Keitsi</title>
 
-        <link rel="stylesheet" href="/main.css">
+        <link rel="stylesheet" href="/src/css/main.css">
     </head>
     <body>
+        <header>
+            <nav class="menu menu--main">
+                <ul class="menu__items">
+                    <li class="menu__item"><a class="menu__anchor" href="/">Sanat</a></li>
+                    <li class="menu__item"><a class="menu__anchor" href="/kuka">Kuka?</a></li>
+                </ul>
+            <nav>
+        </header>
         <main>
             {{ content | safe }}
         </main>
-
     </body>
 </html>
