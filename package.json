@@ -1,0 +1,25 @@
+{
+  "name": "keitsi",
+  "version": "1.0.0",
+  "description": "Words from Keitsi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samikeijonen/keitsi.git"
+  },
+  "keywords": [
+    "keitsi"
+  ],
+  "author": "Sami Keijonen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samikeijonen/keitsi/issues"
+  },
+  "homepage": "https://github.com/samikeijonen/keitsi#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.6.0"
+  }
+}
