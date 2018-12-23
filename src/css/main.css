@@ -27,9 +27,9 @@
 
 	--font-body: "Noto Serif", serif;
 	--font-heading: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	--font-size-main: 1.125rem;
+	--font-size-main: 1rem;
 
-	--line-height-global: 1.5;
+	--line-height-global: 1.75;
 	--line-height-heading: 1.25;
 
 	/* Headings. */
