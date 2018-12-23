@@ -144,6 +144,26 @@ h6,
 	font-size: var(--font-size-h6);
 }
 
+/* Media. */
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/* Make sure images are scaled correctly. */
+img {
+	height: auto;
+	max-width: 100%;
+	/* Removes the whitespace under img, safer than `display: block;`. */
+	vertical-align: middle;
+}
+
+figure {
+	margin: 0 0 var(--spacing-unit-4x);
+}
+
 /* Paragraph. */
 p {
 	margin: 0 0 var(--spacing-unit-4x);
