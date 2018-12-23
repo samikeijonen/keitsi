@@ -1,0 +1,167 @@
+/**
+ * Main stylesheet for the theme.
+ *
+ * Theme styles follow http://cssguidelin.es/ and are organized according to
+ * Inverted Triangle CSS (ITCSS) principles put forth by Harry Roberts. In
+ * short, each layer of CSS gets more specific as you move down this page.
+ */
+
+/*--------------------------------------------------------------
+# Settings - Global variables, config switches.
+--------------------------------------------------------------*/
+:root {
+	--primary-hue: 245;
+	--color-primary-hsl: var(--primary-hue), 80%, 43%;
+	--color-primary: hsl(var(--color-primary-hsl));
+	--color-primary-900: hsl(var(--primary-hue), 82%, 7%);
+	--color-primary-100: hsl(var(--primary-hue), 20%, 97%);
+
+	--color-primary-shadow: hsla(var(--color-primary-hsl), 0.75);
+	--color-grey-800: hsla(0, 0%, 0%, 0.8);
+	--color-grey-700: hsla(0, 0%, 0%, 0.7);
+	--color-grey-600: hsla(0, 0%, 0%, 0.6);
+	--color-grey-100: hsla(0, 0%, 0%, 0.1);
+
+	--color-white: hsl(0, 0%, 100%);
+	--color-black: hsl(0, 0%, 0%);
+
+	--font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--font-size-main: 1.125rem;
+
+	--line-height-global: 1.5;
+	--line-height-heading: 1.25;
+
+	/* Headings. */
+	--font-size-h1: 2rem;
+	--font-size-h2: 1.5rem;
+	--font-size-h3: 1.25rem;
+	--font-size-h4: 1rem;
+	--font-size-h5: 1rem;
+	--font-size-h6: 1rem;
+	--font-size-1: 1rem;
+	--font-size-125: 1.25rem;
+	--font-size-875: 0.875rem;
+
+	/* Spacing. */
+	--spacing-unit: 0.5rem;
+	--spacing-unit-2x: 1rem;
+	--spacing-unit-3x: 1.5rem;
+	--spacing-unit-4x: 2rem;
+	--spacing-unit-8x: 4rem;
+	--spacing-unit-small: 4px;
+
+	/* Max width. */
+	--max-width: 44rem;
+}
+
+
+/*--------------------------------------------------------------
+# Generic - Ground-zero styles (resets, box-sizing, etc.).
+--------------------------------------------------------------*/
+
+/* stylelint-disable */
+html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,[type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto}[type="search"]{-webkit-appearance:textfield;outline-offset:-2px}[type="search"]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
+/* stylelint-enable */
+
+
+html { /* stylelint-disable-line */
+	box-sizing: border-box;
+}
+
+/**
+ * Inherit box-sizing to make it easier to change the property
+ * for components that leverage other behavior.
+ */
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+
+/*--------------------------------------------------------------
+# Elements - Unclassed HTML elements (type selectors).
+--------------------------------------------------------------*/
+
+body,
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: var(--color-grey-800);
+	font-family: var(--font-main);
+	font-size: var(--font-size-main);
+	line-height: var(--line-height-global);
+	word-wrap: break-word;
+}
+
+main {
+	margin: 0 auto;
+	max-width: var(--max-width);
+	padding: var(--spacing-unit-8x) var(--spacing-unit-2x);
+}
+
+/* Headings. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 0 var(--spacing-unit-2x);
+}
+
+h1,
+.h1 {
+	font-size: var(--font-size-h1);
+	line-height: var(--line-height-heading);
+}
+
+h2,
+.h2 {
+	font-size: var(--font-size-h2);
+	line-height: var(--line-height-heading);
+}
+
+h3,
+.h3 {
+	font-size: var(--font-size-h3);
+}
+
+h4,
+.h4 {
+	font-size: var(--font-size-h4);
+}
+
+h5,
+.h5 {
+	font-size: var(--font-size-h5);
+}
+
+h6,
+.h6 {
+	font-size: var(--font-size-h6);
+}
+
+/* Paragraph. */
+p {
+	margin: 0 0 var(--spacing-unit-4x);
+}
+
+
+/*--------------------------------------------------------------
+# Objects - Undecorated design patterns.
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+# Components - specific UI components.
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+# Utilities - Helpers and overrides.
+--------------------------------------------------------------*/
