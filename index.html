@@ -1,41 +1,22 @@
 ---
 layout: layouts/base.njk
-title: Kirkkauden peili
+title: Keitsin sanoja
 ---
-<h1>Kirkkauden peili</h1>
-<p>
-Kuu saa valtansa sinulta ja auringolta<br>
-Sinä heijastat iloa taivaan ja helvetin<br>
-Olet veljeskuntamme rytmitehdas,<br>
-kahden joen yhdistävä voima<br>
-Mikään ei vie sitä pois<br>
-Sitä sametinpehmeää lumienkeliä<br>
-Ei mikään
-</p>
-<p>
-Raskas yö, pimeä päivä, matkalla hiljaisuuteen<br>
-Paha, suljettu mielen astia<br>
-Ei yksikään, ei koskaan ymmärrä<br>
-Toisaalla pelon enkeli, tuolla Tuonen lintu<br>
-odottaa tähdet sylissään,<br>
-revontulten repijää
-</p>
-<p>
-Niin kappaleina kuuntelemme kappaleita:<br>
-Luotisuora – Seitsentahokas – Taivaanääreläiset<br>
-Niin kappaleina kuuntelemme kappaleita<br>
-Palvelemaan Konetta – Fysiikka Ei Kestä<br>
-Iäti ikävöiden,<br>
-katsoen kauneuden pitkää varjoa,<br>
-kaikkivaltiaan peiliä
-</p>
+<h1>Keitsin sanoja</h1>
+<h2>Sekalaista</h2>
+<ul>
+    {%- for post in collections.post -%}
+        <li>
+            <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+        </li>
+    {%- endfor -%}
+</ul>
 
-<p>
-Nyt antakaamme hautalintujen lentää<br>
-Ruosteen ruostua<br>
-Kirosäkeitten, Vainajalan vaieta
-</p>
-
-<p>
-Sinua Iäti ikävöiden
-</p>
+<h2>Biisit</h2>
+<ul>
+    {%- for song in collections.song -%}
+        <li>
+            <h3><a href="{{ song.url }}">{{ song.data.title }}</a></h3>
+        </li>
+    {%- endfor -%}
+</ul>
