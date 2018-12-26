@@ -11,8 +11,8 @@
 --------------------------------------------------------------*/
 :root {
 	/* Colors. */
-	--primary-hue: 245;
-	--color-primary-hsl: var(--primary-hue), 80%, 43%;
+	--primary-hue: 7;
+	--color-primary-hsl: var(--primary-hue), 85%, 54%;
 	--color-primary: hsl(var(--color-primary-hsl));
 	--color-primary-900: hsl(var(--primary-hue), 82%, 7%);
 	--color-primary-100: hsl(var(--primary-hue), 20%, 97%);
@@ -203,7 +203,7 @@ h6,
 /* Lists. */
 ul,
 ol {
-	margin: 0 0 var(--spacing-unit-4x) var(--spacing-unit-2x);
+	margin: 0 0 var(--spacing-unit-4x) var(--spacing-unit);
 	padding: 0 0 0 var(--spacing-unit-3x);
 }
 
