@@ -12,7 +12,7 @@
 :root {
 	/* Colors. */
 	--primary-hue: 7;
-	--color-primary-hsl: var(--primary-hue), 85%, 54%;
+	--color-primary-hsl: var(--primary-hue), 85%, 48%;
 	--color-primary: hsl(var(--color-primary-hsl));
 	--color-primary-900: hsl(var(--primary-hue), 82%, 7%);
 	--color-primary-100: hsl(var(--primary-hue), 20%, 97%);
@@ -279,6 +279,7 @@ p {
 }
 
 .menu__anchor {
+	color: var(--color-grey-700);
 	text-decoration: none;
 }
 
